@@ -562,7 +562,7 @@ Applying dependency inversion principle
       +log(message:String):void
 }
 ```
-Benefit of the Dependency inversion priciple - Example;
+Benefit of the Dependency inversion principle - Example;
 We can introduce new DatabaseRepos and Loggers implementations without any impact on higher level code;
 ```mermaid
    classDiagram
