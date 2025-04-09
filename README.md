@@ -103,3 +103,133 @@ Service Provider Interface. Consumer provides interface. Functionality Provider 
 ```
 ###### Standard Interface
 3rd party defines the interface. Consumer and provider follows the rules defined by the standard interface. Example; OAuthx.0, EMVCo standards
+
+## Impacting Factors
+### Stakeholder
+An individual, group, or organization who may affect, be affected by, or perceive itself to be affected by a decision, activity, or outcome of a project.
+
+### Requirements
+1. Something that a system stakeholder wants / our system needs to provide
+2. A document that includes needs, wants, and expectations of stakeholders
+
+Requirements are classified into 3 groups;
+#### Functional Requirements
+1. What shall X do?
+2. "required feature" - description of a feature that system needs to provide
+3. When A happens, the system should do B
+4. Functional changes are manageable
+
+#### Quality Requirements (NFRs)
+1.  How shall X be?
+2.  "required quality"
+3.  The system (or architecture or component) shall be secure (or maintainable, or efficient, etc)
+4.  Examples; <br/><b>Online Store (Performance)</b> When a user conducts a product search, the system shall display results within 2 seconds for 95% of the searches. <br/><b>Banking Service (Security)</b>Only authorized persons can view the balance and perform transactions in a bank account.
+5.  Changes or missing a quality requirement can have a significant impact to the system
+
+##### Common Quality Requirements
+###### Performance
+1. Throughput: Work done per unit of time. Requests served / sec
+2. Latency: Delay of completion of a task. Response time
+
+###### Efficiency
+1. Work done in relation to resources used. Efficient use of battery - relevant for Mobile apps, IoT systems
+
+###### Scalability
+1. <u>Potential</u> to increase performance
+2. Scalability will not automatically increase performance but will allow you to do so
+3. Vertical Scaling vs. Horizontal Scaling (Scaling up vs. Scaling out)
+
+###### Elastic Scalability
+1. Ability to increase performance when needed and to decrease it when it's no longer required to save on resources - commonly associated with cloud based systems
+
+#### System Constraints
+1. A constraint is a requirement that limits the solution space beyond what is necessary for meeting the given functional requirements and quality requirements
+2. Externally imposed limitation on system requirements, design, or implementation or on the process used to develop or modify the system
+3. Examples; <br/>- Technical Constraints - Being locked into a specific cloud vendor, Programming language<br/> - Budget Constraints - <br/> - Legal Constrainsts - how we store or use our customer data.
+4. It is not always a bad thing - limiting our choices makes our life easier
+
+Some of the influencing factors on system architecture that originate from system's context;
+##### Technological Factors
+Existing
+1. Programming Language
+2. Hardware Infra
+3. Software Infra
+4. Programming Guidelines
+5. Operating Environment
+6. Technologies and Tools
+7. Availability of Runtime Environment
+8. GUI
+9. Communication Protocols
+10. Programming Interfaces
+11. Libraries, Frameworks and Components 
+
+##### Organizational Factors
+###### Structure of the company and project team
+1. Simplified Conway's Law
+> A system built by 4 teams will probably consist of 4 large building blocks. Often there is no technical necessity for this. Quality of communication between these teams influences the quality and type of system interfaces.
+
+Application of Inverse Conway Maneuver. Examples; Layered and Microservices architectural styles
+<br/>2. Decision Makers - Internal, External - Change in the decision maker, etc
+<br/>3. Internal / external (outsourced) development
+<br/>4. Commercial product vs. product for internal usage 
+
+###### Resources (Budget, Time, Staff)
+1. Contract / Project Budget: fixed price/ time
+2. Time Schedule and release plan: flexible / fixed deadline
+3. Priorities: Deadline / scope of functions - MVP vs Later vs Nice-to-have
+4. Team: Number of team members, skill-set, availability, commitment
+
+###### Standards
+1. Process model, Quality Standards. Examples; ASPICE in automobile industry, PCI-DSS in payment domain
+2. Test, approval and release process - Examples; Commit Signing
+3. Tools - usage of specific tools, versions, etc
+
+###### Legal
+1. Liability issues - Burden of proof
+2. Privacy laws, data protection, International legal issues
+3. Examples - GDPR in EU, CCPA in California, HIPPA in US, COPPA for children's privacy
+
+##### Product Related
+###### Quality Requirements
+####### Quality Attributes vs. Quality Goals vs. Quality Requirements
+Quality Attributes
+1. Properties. Examples; Performance, Availability, Security, Useability
+2. Some are positively correlated. I.e.; improvement in one attribute improves related attribute
+3. Some are negatively correlated. I.e.; one comes at the expense of the other attribute
+
+   ```mermaid
+     flowchart TB
+       A[Quality Attributes] --> B[Scalability & Performance +ve]
+       A[Quality Attributes] --> C[Simplicity & Understandability +ve]
+       A[Quality Attributes] --> D[Reliability & Availability +ve]
+       A[Quality Attributes] --> E[Memory Usage & CPU utilization -ve]
+       A[Quality Attributes] --> F[Security & Usability -ve]
+       A[Quality Attributes] --> G[Adaptability, Flexibility & High Performance -ve]
+       A[Quality Attributes] --> H[Efficiency & Maintainability / Adaptibility]
+   ```
+####### Quality Goals
+1. High level objectives
+2. To achieve these goals; we need to utilize several quality attributes
+3. Examples; Improving user experience and satatisfaction - this may mean improving performance and usability
+
+####### Quality Requirements
+1. Specific, actionable, detailed statements derived from quality goals - should be precise and measurable
+2. Outlines the conditions a software system must meet
+3. Examples; The system must be available 99.9% of the time
+
+Example;
+1. Quality Goal - Improve user experience and satisfaction
+2. Quality Attributes Involved - Performance, Usability
+3. Quality Requirements
+<br/>- A user should see the product homepage in the browser within 500ms at most
+<br/>- A product search feature should return relevant results within 2 secs with atleast 90% accuracy
+
+Quality goals and requirements can
+1. Align with or contradict each other
+2. Support or compete with other influecning factors (project or business goals)
+
+For quality requirements that cannot be easily quantified (Sustainability, Maintainability, Understandability), it is important to have clear criteria when the requirement is  met / the work is done. DoD.
+
+###### Others
+1. Open source vs closed source
+2. One time purchase vs. subscription-based vs. consumption-based
