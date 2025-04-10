@@ -40,7 +40,13 @@ System is structured into stacked layers of services.
 
 ### Multi-Layered / N-Layered Monolith Architecture
 Web Architecture
-![Web Architecture!](/web_arch.png)
+![Web Arch!](/web_arch.png)
+
+### Multi-Tiered Architecture
+Each tier runs in its own process, and even separate computer.
+3-Tiered Architecture
+![3 tiered!](/three_tiered.png)
+![3 tiered plus layered!](/three_tiered_layered.png)
 
 ## Closed-Layered Architecture vs. Open Layered
 
