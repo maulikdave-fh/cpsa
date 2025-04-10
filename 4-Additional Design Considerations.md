@@ -1,6 +1,9 @@
 Following are some ways to reduce system complexity and apply the design principles.
 
 ## Generative Creation of Components
+1. Reduce code we need to write / maintain
+2. Delegate boilerplate code generation to automated tools
+   
 ### Macros 
 #### Preprocessor in C/C++
 - Allows to apply DRY principle
