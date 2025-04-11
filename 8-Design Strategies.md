@@ -226,4 +226,32 @@ The solution with reduced flexibility. Need to strike a right balance when reduc
     mindmap
       root(Strategies for High Availability)
         Error Prevention
+          Use Transactions in database operations
+          Input Validation
+          Eliminating Performance Bottlenecks
+            Backpressure in pipes and filters architecture
+        Error Detection
+          Monitoring
+            Critical Metrics
+            Visually and Programmatically
+            Examples
+              Uptime
+              Incoming Http requests/sec
+              Error rate
+              CPU / Memory utilization
+              Error status codes
+          Validating Accuracy of Results
+        Error Handling
+          Robust Exception Handling
+            Retry
+            Connect to alternate provider
+            If all fails, log task or put it in failed tasks queue
+          Rollback
+            Transaction Rollback
+            Release Rollback
+          Eliminating Single Point of Failure
+          Automatic detection and replacement of faulty instance
 ```
+### Validating Accuracy
+Running 2nd Analytics process that runs on a schedule and counts all the accout balances of all the customers & adds the total net wire-transfers in and out of our bank to ensure no money is missing without any paper trace.
+![Validating Accuracy!](/validate_accuracy.png)
