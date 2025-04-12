@@ -190,9 +190,8 @@ Application of Inverse Conway Maneuver. Examples; Layered and Microservices arch
 3. Examples - GDPR in EU, CCPA in California, HIPPA in US, COPPA for children's privacy
 
 ##### Product Related
-###### Quality Requirements
-####### Quality Attributes vs. Quality Goals vs. Quality Requirements
-Quality Attributes
+###### Quality Attributes vs. Quality Goals vs. Quality Requirements
+###### Quality Attributes
 1. Properties. Examples; Performance, Availability, Security, Useability
 2. Some are positively correlated. I.e.; improvement in one attribute improves related attribute
 3. Some are negatively correlated. I.e.; one comes at the expense of the other attribute
@@ -207,12 +206,13 @@ Quality Attributes
        A[Quality Attributes] --> G[Adaptability, Flexibility & High Performance -ve]
        A[Quality Attributes] --> H[Efficiency & Maintainability / Adaptibility]
    ```
-####### Quality Goals
+      
+###### Quality Goals
 1. High level objectives
 2. To achieve these goals; we need to utilize several quality attributes
 3. Examples; Improving user experience and satatisfaction - this may mean improving performance and usability
 
-####### Quality Requirements
+###### Quality Requirements
 1. Specific, actionable, detailed statements derived from quality goals - should be precise and measurable
 2. Outlines the conditions a software system must meet
 3. Examples; The system must be available 99.9% of the time
